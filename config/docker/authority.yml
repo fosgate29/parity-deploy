@@ -1,6 +1,6 @@
    hostNODE_NAME:
        container_name: hostNODE_NAME 
-       image: parity/parity:stable
+       image: parity/parity:v2.4.8-stable
        user: root
        working_dir: /home/parity'
        volumes:
