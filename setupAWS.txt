@@ -1,0 +1,25 @@
+1) clone parity-deploy
+git clone https://github.com/fosgate29/parity-deploy.git
+
+2) cd parity-deploy
+
+3) Install docker and docker-compose according to instructions here:
+https://docs.docker.com/install/linux/docker-ce/ubuntu/
+
+4) Install docker-compose
+https://docs.docker.com/compose/install/
+
+5) Open 30303 TCP and UDP , 8545 tcp port to anywhere in your AWS instance
+
+6) run $sudo ./parity-deploy.sh --config aura 
+
+7) Launch network:
+   $sudo docker-compose up -d
+
+8) check logs
+   $ docker-compose logs -f 
+
+9) create a tunel ( to connect metamask or curl)
+   ssh -i paritytest.pem -N -v ubuntu@ec2-18-219-83-56.us-east-2.compute.amazonaws.com -L 8545:localhost:8545
+
+
